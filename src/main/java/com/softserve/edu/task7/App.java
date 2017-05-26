@@ -2,8 +2,6 @@ package com.softserve.edu.task7;
 
 import com.softserve.edu.task7.math.NumberFinder;
 
-import java.text.NumberFormat;
-
 /**
  * entry point
  */
