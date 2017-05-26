@@ -10,7 +10,7 @@ import java.util.List;
  * find integer numbers which square less than the given number
  */
 public class NumberFinder {
-    List<Integer> results;
+    private List<Integer> results;
 
     public NumberFinder(String input) {
         results = new ArrayList<>();
