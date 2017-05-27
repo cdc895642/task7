@@ -13,8 +13,12 @@ public class NumberFinder {
     private List<Integer> results;
 
     public NumberFinder(String input) {
-        results = new ArrayList<>();
+        this();
         findFromString(input);
+    }
+
+    private NumberFinder(){
+        results = new ArrayList<>();
     }
 
     private void findFromString(String input) {
@@ -22,7 +26,7 @@ public class NumberFinder {
         findNumbers(initNum);
     }
 
-    private void findNumbers(int initNum) {
+    protected void findNumbers(int initNum) {
         if (initNum<0){
             throw new IllegalArgumentException("Error - inserted negative integer.");
         }
