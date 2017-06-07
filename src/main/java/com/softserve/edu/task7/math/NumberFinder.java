@@ -5,6 +5,7 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by cdc89 on 26.05.2017.
@@ -50,8 +51,13 @@ public class NumberFinder {
      * print integer numbers which square less than the given number
      */
     public void printValues() {
-        results.stream().limit(1).forEach(out::print);
-        results.stream().skip(1).map(x -> "," + x).forEach(out::print);
+        // StringJoiner
+//        results.stream().limit(1).forEach(out::print);
+//        results.stream().skip(1).map(x -> "," + x).forEach(out::print);
+        String commaSeparatedNumbers = results.stream()
+                .map(i -> i.toString())
+                .collect(Collectors.joining(","));
+        out.print(commaSeparatedNumbers);
     }
 
     private int getInitialNumber(String input) {
